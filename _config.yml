@@ -4,16 +4,16 @@ setting:
     ssl: false  # gitee友链配置
 
   gitee_friends_links: # gitee友链配置
-    enable: false
+    enable: true
     type: normal # volantis用户请在这里填写 volantis
-    owner: Zfour # 填写你的gitee用户名
-    repo: zfour-friends # 填写你的gitee仓库名
+    owner: Justlovesmile # 填写你的gitee用户名
+    repo: friendissue # 填写你的gitee仓库名
     state: open # 填写抓取的issue状态(open/progressing/closed)
 
   github_friends_links: # github友链配置
     enable: false
     type: normal # volantis用户请在这里填写 volantis
-    owner: Zfour # 填写你的github用户名
+    owner: Justlovesmile # 填写你的github用户名
     repo: zfour-friends # 填写你的github仓库名
     state: open # 填写抓取的issue状态(open/closed)
 
@@ -30,7 +30,6 @@ setting:
     - '::'
     - '-'
     - '·'
-    - '绒布球'
 
   block_site: # 屏蔽站点
     - https://example.com/
