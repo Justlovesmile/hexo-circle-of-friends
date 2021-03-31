@@ -108,17 +108,18 @@ def kang_api(friend_poor):
     print('-------获取gitee友链----------')
     baselink = 'https://gitee.com'
     errortimes = 0
-    print('owner:', config['setting']['gitee_friends_links']['owner'])
-    print('repo:', config['setting']['gitee_friends_links']['repo'])
-    print('state:', config['setting']['gitee_friends_links']['state'])
+    conf=config.yml
+    print('owner:', conf['setting']['gitee_friends_links']['owner'])
+    print('repo:', conf['setting']['gitee_friends_links']['repo'])
+    print('state:', conf['setting']['gitee_friends_links']['state'])
     try:
         for number in range(1, 100):
             print(number)
             gitee = request.get_data('https://gitee.com/' +
-                                     config['setting']['gitee_friends_links']['owner'] +
+                                     conf['setting']['gitee_friends_links']['owner'] +
                                      '/' +
-                                     config['setting']['gitee_friends_links']['repo'] +
-                                     '/issues?state=' + config['setting']['gitee_friends_links'][
+                                     conf['setting']['gitee_friends_links']['repo'] +
+                                     '/issues?state=' + conf['setting']['gitee_friends_links'][
                                          'state'] + '&page=' + str(number))
             soup = BeautifulSoup(gitee, 'html.parser')
             main_content = soup.find_all(id='git-issues')
