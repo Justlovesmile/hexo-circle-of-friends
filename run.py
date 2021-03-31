@@ -84,8 +84,9 @@ def main():
         if config['setting']['gitee_friends_links']['enable'] and config['setting']['gitee_friends_links']['type'] == 'normal':
             try:
                 kang_api(friend_poor)
-            except:
+            except Exception as e:
                 print('读取gitee友链失败')
+                print(e)
         else:
             print('未开启gitee友链获取')
         if config['setting']['github_friends_links']['enable'] and config['setting']['github_friends_links']['type'] == 'normal':
