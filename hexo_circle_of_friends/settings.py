@@ -40,8 +40,8 @@ LINK = [
 #       avatar：必填，头像地址
 #       suffix：选填，自定义订阅后缀，主要针对不规范的网站订阅后缀，见示例2
 SETTINGS_FRIENDS_LINKS = {
-    "enable": False,
-    "json_api": "",
+    "enable": True,
+    "json_api": "https://unpkg.com/friendsofmj@latest/friend.json",
     "list": [
         # 示例1：
         ["贰猹の小窝", "https://noionion.top/", "https://pub-noionion.oss-cn-hangzhou.aliyuncs.com/head.jpg"],
@@ -67,10 +67,10 @@ GITEE_FRIENDS_LINKS = {
 # get links from github
 # 从github issue中获取友链
 GITHUB_FRIENDS_LINKS = {
-    "enable": False,  # True 开启github issue兼容
+    "enable": True,  # True 开启github issue兼容
     "type": "normal",  # volantis/stellar用户请在这里填写volantis
-    "owner": "ccknbc",  # 填写你的github用户名
-    "repo": "ccknbc-actions",  # 填写你的github仓库名
+    "owner": "Justlovesmile",  # 填写你的github用户名
+    "repo": "friend-issue",  # 填写你的github仓库名
     "state": "open"  # 填写抓取的issue状态(open/closed)
 }
 
